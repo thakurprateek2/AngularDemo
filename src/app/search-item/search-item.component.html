@@ -1,0 +1,25 @@
+<div class="card" [ngClass]="{'text-white': result.favorite, 'bg-warning': result.favorite}" style="width: 18rem;">
+  <div class="card-header">
+    <h5 class="card-title">{{result.title}}</h5>
+  </div>
+  <img class="card-img-top" src="{{result.thumbnailUrl}}" alt="Card image cap">
+  <div class="card-body">
+
+    <div>
+      <a [routerLink]="['/profile/' + result.id]" class="btn btn-primary text-white">Open Profile</a>
+    </div>
+
+    <div>
+      <a *ngIf="result.favorite" (click)="removeFromFavorites()" class="btn btn-primary text-white">Remove from Favorites</a>
+    </div>
+
+    <div>
+      <a *ngIf="!result.favorite" (click)="addToFavories()" class="btn btn-primary text-white">Add To Favorites</a>
+    </div>
+
+    <div>
+      <a (click)="removeFromHistory()" class="btn btn-danger text-white">Remove</a>
+    </div>
+
+  </div>
+</div>

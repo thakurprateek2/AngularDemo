@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hi, there!</h1>
+  <p class="lead">This is a simple app for you to search users on Github.</p>
+  <hr class="my-4">
+  <p>It will let you search user ,keep track of your search history and let you pick your favorites. Go ahead try it out by clicking any of below buttons!</p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-primary btn-lg" [routerLink]="['/search']" role="button">Search Github Users</a>
+        
+      </div>
+      <div class="col">
+        <a class="btn btn-secondary btn-lg" [routerLink]="['/history']" role="button">View your search history</a>
+        
+      </div>
+    </div>
+  </div>
+</div>

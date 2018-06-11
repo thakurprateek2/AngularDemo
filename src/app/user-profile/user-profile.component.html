@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" [ngClass]="{'text-white': user.favorite, 'bg-warning': user.favorite}" style="width: 18rem;">
+            <div class="card-header">
+              <h5 class="card-title">{{user.title}}</h5>
+            </div>
+            <img class="card-img-top" src="{{user.thumbnailUrl}}" alt="Card image cap">
+          </div>
+      </div>
+      <div class="col-sm">
+          <div>
+              <a *ngIf="user.favorite" (click)="removeFromFavorites()" class="btn btn-primary text-white">Remove from Favorites</a>
+            </div>
+        
+            <div>
+              <a *ngIf="!user.favorite" (click)="addToFavories()" class="btn btn-primary text-white">Add To Favorites</a>
+            </div>
+      </div>
+      <div class="col-sm">
+          <div>
+              <a (click)="removeFromHistory()" class="btn btn-danger text-white">Remove From History</a>
+            </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+
+<div class="sort-row">
+  <div>Sort Using</div>
+  <div>
+    <div class="btn-group" role="group" >
+        <button (click)="sortByName()" type="button" class="btn btn-secondary">Name</button>
+        <button (click)="sortByFavorite()" type="button" class="btn btn-secondary">Favorite</button>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <app-search-item
+    *ngFor="let user of sortUsers()"
+    [result]="user"
+    (userUpdated)="updateUsers()">
+  </app-search-item>
+</div>

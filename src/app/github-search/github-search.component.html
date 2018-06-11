@@ -1,0 +1,12 @@
+<h5>Enter search text below</h5>
+<app-search-box
+           (loading)="loading = $event"
+           (results)="updateResults($event)"
+            ></app-search-box>
+
+            <div class="row">
+              <app-search-result
+                *ngFor="let result of results"
+                [result]="result">
+              </app-search-result>
+            </div>

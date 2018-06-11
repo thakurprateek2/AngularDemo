@@ -1,0 +1,13 @@
+<div class="card" [ngClass]="{'text-white': result.favorite, 'bg-warning': result.favorite}" style="width: 18rem;">
+  <div class="card-header">
+    <h5 class="card-title">{{result.title}}</h5>
+  </div>
+  <img class="card-img-top" src="{{result.thumbnailUrl}}" alt="Card image cap">
+  <div class="card-body">
+
+    <div>
+      <a (click)="addToHistory()" [routerLink]="['/profile/' + result.id]" class="btn btn-primary text-white">Open Profile</a>
+    </div>
+
+  </div>
+</div>
